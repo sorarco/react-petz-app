@@ -8,5 +8,9 @@ const theme = {
     dark: "#262626",
     muted: "#6E6E6E",
   },
+  snackOpt: {
+    backgroundColor: "#1b6db0",
+    color: "#FFF",
+  },
 };
 export default theme;

@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "next": "^10.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-simple-snackbar": "^1.1.10",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

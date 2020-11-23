@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It has to contain NavLink 1`] = `
+.c0 {
+  color: #1b6db0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover {
+  font-weight: 900;
+}
+
+<a
+  class="c0"
+  href="/post/1"
+>
+  edit
+</a>
+`;

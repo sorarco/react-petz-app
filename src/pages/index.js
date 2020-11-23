@@ -1,23 +1,39 @@
+import { useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
-
-const Title = styled.h1`
-  font-size: 14px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-function HomePage({ data }) {
+import Head from "next/head";
+import FilterTable from "components/FilterTable";
+import * as SNav from "styles/nav";
+import * as SHome from "styles/pages/Home";
+function HomePage({ posts }) {
   return (
     <div>
-      <img src="/assets/images/logo.png" alt="my image" width="100" />
-      <p>Welcome to Next.js!</p>
+      <Head>
+        <title>React Petz App</title>
+      </Head>
+
+      <SNav.Header>
+        <div>
+          <img src="/assets/images/logo.png" alt="my image" width="100" />
+          <SNav.Nav>
+            <ul>
+              <li>
+                <a href="https://github.com/sorarco/react-petz-app">GitHub</a>
+              </li>
+            </ul>
+          </SNav.Nav>
+        </div>
+      </SNav.Header>
+      <SHome.Main>
+        <FilterTable data={posts} filterBy="title" />
+      </SHome.Main>
     </div>
   );
 }
 
 export async function getServerSideProps() {
-  const data = [];
-
-  return { props: { data } };
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await response.json();
+  return { props: { posts } };
 }
 
 export default HomePage;
