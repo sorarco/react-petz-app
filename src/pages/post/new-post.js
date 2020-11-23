@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useContext } from "react";
+import { useState, useContext } from "react";
 import { useRouter } from "next/router";
 import { useSnackbar } from "react-simple-snackbar";
 import { ThemeContext } from "styled-components";

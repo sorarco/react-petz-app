@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useContext } from "react";
+import { useState, useMemo, useContext } from "react";
 import { useSnackbar } from "react-simple-snackbar";
 import { ThemeContext } from "styled-components";
 import { Column, Grid, Row } from "components/Table";
@@ -52,14 +52,10 @@ const FilterTable = ({ data, filterBy }) => {
         .indexOf(id);
 
       const _dl = dataLocal.splice(index, 1);
-      console.log("_dl ", _dl.length);
-      console.log("dataLocal ", dataLocal.length);
       setdDataLocal(dataLocal);
       setId(id);
       openSnackbar(POST_DESTROY_MESSAGE);
-    } catch (error) {
-      console.log("error ", error);
-    }
+    } catch (error) {}
   };
 
   const renderFilter = () => {

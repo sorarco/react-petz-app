@@ -1,4 +1,3 @@
-import React from "react";
 import { Input } from "components/Form";
 import * as S from "./styles";
 const SearchBar = ({ handlerFilterText }) => {

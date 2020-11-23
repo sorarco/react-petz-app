@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import * as S from "./styles";
 const ButtonLink = ({ children, href, onClick }) => {

@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./styles";
 const Row = ({ size, children, head, footer, border }) => {
   return (

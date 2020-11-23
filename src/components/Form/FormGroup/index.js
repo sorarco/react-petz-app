@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./styles";
 import { Column, Grid, Row } from "components/Table";
 const FormGroup = ({ children }) => {

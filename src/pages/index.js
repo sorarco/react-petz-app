@@ -1,5 +1,3 @@
-import { useEffect, useState, useCallback } from "react";
-import styled from "styled-components";
 import Head from "next/head";
 import FilterTable from "components/FilterTable";
 import * as SNav from "styles/nav";
